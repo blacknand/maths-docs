@@ -1,6 +1,6 @@
 \documentclass[options]{article}
 \title{Inversion of 2x2 Matricies}
-\author{Nathan Blackburn {@blacknand}}
+\author{Nathan Blackburn {blacknand@github}}
 \date{September 2024}
 
 % Document config
@@ -143,5 +143,73 @@ We shall continue to use the same example from the previous subsection.
 When the resulting matrix is \( \begin{pmatrix} 1 & 0\\0 & 1 \end{pmatrix} \) then it means you have correctly found the inverse.
 You can see this is true because we have ended up with the identity matrix, with a value of 1 and it's diagonal 1s and corresponding 0s.
 \section{Examples}
-This section contains 5 worked samples 
+This section contains 3 worked samples 
+\subsection{Question 1}
+Find the inverse of the following matrix, if it exists: \( a = \begin{pmatrix} 2 & 3\\1 & 4 \end{pmatrix} \)
+\begin{center}
+    \( 
+        \begin{pmatrix} 
+            2 & 3\\1 & 4 
+        \end{pmatrix}^{-1} 
+        = \frac{1}{4 
+            \cdot 2 - 3 
+            \cdot 1} 
+            \cdot 
+        \begin{pmatrix}
+            4 & -3\\-1 & 2
+        \end{pmatrix}
+    \)
+
+    \(
+        = 
+        \frac{1}{5}
+        \cdot
+        \begin{pmatrix}
+            4 & -3\\
+            -1 & 2
+        \end{pmatrix}
+    \)
+    
+    \(
+        = \begin{pmatrix}
+            0.8 & -0.6\\
+            -0.2 & 0.4
+        \end{pmatrix}
+    \)
+\end{center}
+Now that we have worked out the inverse, we just need to confirm it is correct:
+\begin{center}
+    \(
+        \begin{pmatrix}
+            2 & 3\\
+            1 & 4
+        \end{pmatrix}
+        \cdot
+        \begin{pmatrix}
+            0.8 & -0.6\\
+            -0.2 & 0.4
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            2 * 0.8 - 3 * (-0.2) & 2 * (-0.6) + 3 * 0.4\\
+            1 * 0.8 - 4 * (-0.2) & 1 * (-0.6) + 4 * 0.4
+        \end{pmatrix}
+    \)
+
+    \(
+        = 
+        \begin{pmatrix}
+            1.6 - 0.6 & -1.2 + 1.2\\
+            0.8 - 0.8 & -0.6 + 1.6
+        \end{pmatrix}
+    \)
+
+    \(
+        =
+        \begin{pmatrix}
+            1 & 0\\
+            0 & 1
+        \end{pmatrix}
+    \)
+\end{center}
 \end{document}
