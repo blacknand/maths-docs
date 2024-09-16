@@ -38,7 +38,8 @@ You can see here that it has got 1 going down diagonally and 0 in every other ro
 matrix, as mentioned in the title can be \(2 \cdot 2\), \(3 \cdot 3\), \(4 \cdot 4\)... The inverse of a matrix \(a\) is \(a^{-1}\) only when \(a \cdot a^{-1} = a^{-1} \cdot a = i\)
 
 \section{2x2 matricies}
-There are a few easy steps to find the inverse of a 2x2 matrix. The first step is to determine if a matrix actually has an inverse, you do so by working out the detriment. If it does then you can find the inverse, and then check if the inverse is correct with a special method.
+There are a few easy steps to find the inverse of a 2x2 matrix. The first step is to determine if a matrix actually has an inverse, you do so by working out the detriment. 
+If it does then you can find the inverse, and then check if the inverse is correct by mutliplying the inverse by the original matrix.
 \subsection{The detriment}
 To workout the detriment, we do the following:
 \begin{center}
@@ -87,5 +88,45 @@ and is therefore incalculable. Here is an example:
 The best idea is to just enter \(\frac{1}{4 \cdot 6 - 7 \cdot 2}\) onto a scientific calculator directly. Do not work out
 \( 4 \cdot 6 - 7 \cdot 2 \) yourself as this can lead to an incorrect calculation, especially since there are so many decimal places involved. 
 \subsection{Multiplying the matrix}
-Once we have worked out the detriment, we then use it to multiply the matrix by its inverse. 
+Once we have worked out the detriment, we then use it to multiply the matrix by its inverse. The first thing to do is to just multiply the original matrix with the inverse we just worked out.
+We shall continue to use the same example from the previous subsection. 
+\begin{center}
+    \(
+        \begin{pmatrix}
+            4 & 7\\
+            2 & 6
+        \end{pmatrix}
+        \cdot
+        \begin{pmatrix}
+            0.6 & -0.7\\
+            -0.2 & 0.4
+        \end{pmatrix}
+    \)
+
+    \(
+        =
+        \begin{pmatrix}
+            4 * 0.6 + 7 * (-0.2) & 4 * (-0.7) + 7 * 0.4\\
+            2 * 0.6 + 6 * (-0.2) & 2 * (-0.7) + 6 * 0.4
+        \end{pmatrix}
+    \)
+
+    \(
+        = 
+        \begin{pmatrix}
+            2.4 - 1.4 & -2.8 + 2.8\\
+            1.2 - 1.2 & -1.4 + 2.4
+        \end{pmatrix}
+    \)
+
+    \(
+        =
+        \begin{pmatrix}
+            1 & 0\\
+            0 & 1
+        \end{pmatrix}
+    \)
+\end{center}
+When the resulting matrix is \( \begin{pmatrix} 1 & 0\\0 & 1 \end{pmatrix} \) then it means you have correctly found the inverse.
+You can see this is true because we have ended up with the identity matrix, with a value of 1 and it's diagonal 1s and corresponding 0s.
 \end{document}
