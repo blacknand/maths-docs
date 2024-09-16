@@ -4,6 +4,7 @@
 \date{September 2024}
 
 % Document config
+\usepackage{amsmath}
 \setlength{\parskip}{1em}  
 
 \begin{document}
@@ -11,10 +12,32 @@
 Notes on the inversion of 2x2 matrices, which can be applied to an arbitrary number of \( n \cdot n \) matrices.
 \vspace{-1em}
 \section{The inversion of a matrix}
-Just like every number has a reciprocal such as \(8^-1\), a matrix \(n\) also has a reciprocal: \(n^-1\). When a matrix
-is multiplied by it's reciprocal (\(n \cdot n^-1\)) the result is \(I\), also known as the identity matrix. The identity matrix
+Just like every number has a reciprocal such as \(8^{-1}\), a matrix \(n\) also has a reciprocal: \(n^{-1}\). When a matrix
+is multiplied by it's reciprocal (\(n \cdot n^{-1}\)) the result is \(I\), also known as the identity matrix. The identity matrix
 is the matrix equivelance of the number 1 obtained from the reciprocal of a real number, in other words, the identity matrix is just 1, exactly the same
-way that the reciprocal of \(\frac{1}{8} \cdot 8 = 1\).
+way that the reciprocal of \(\frac{1}{8} \cdot 8 = 1\). This information is not terribly important, but is nontheless useful to know.
 \par
+
+
+A good example of an identity matrix is a \( 3 \times 3 \) matrix, \( I \):
+
+\begin{center}
+
+    \(
+        i = 
+        \begin{pmatrix}
+        1 & 0 & 0\\
+        0 & 1 & 0\\
+        0 & 0 & 1
+        \end{pmatrix}
+    \)
+
+\end{center}
+
+You can see here that it has got 1 going down diagonally and 0 in every other row and column. An identity
+matrix, as mentioned in the title can be \(2 \cdot 2\), \(3 \cdot 3\), \(4 \cdot 4\)... The inverse of a matrix \(a\) is \(a^{-1}\) only when \(a \cdot a^{-1} = a^{-1} \cdot a = i\)
+
+\section{2x2 matricies}
+
 
 \end{document}
