@@ -38,6 +38,54 @@ You can see here that it has got 1 going down diagonally and 0 in every other ro
 matrix, as mentioned in the title can be \(2 \cdot 2\), \(3 \cdot 3\), \(4 \cdot 4\)... The inverse of a matrix \(a\) is \(a^{-1}\) only when \(a \cdot a^{-1} = a^{-1} \cdot a = i\)
 
 \section{2x2 matricies}
+There are a few easy steps to find the inverse of a 2x2 matrix. The first step is to determine if a matrix actually has an inverse, you do so by working out the detriment. If it does then you can find the inverse, and then check if the inverse is correct with a special method.
+\subsection{The detriment}
+To workout the detriment, we do the following:
+\begin{center}
+    \(
+        \begin{pmatrix}
+            a & b\\
+            c & d
+        \end{pmatrix}
+        ^{-1} 
+        =
+        \frac{1}{a \cdot d - b \cdot c}
+        \cdot
+        \begin{pmatrix}
+            d & -b\\
+            -c & a
+        \end{pmatrix}
+    \)
+\end{center}
+Here in the matrix on the right (the inverse of the original matrix) we have swapped matrix element \(a\) and \(d\) with each other, and then added a \(-\) sign in front of \(b\) and \(c\). 
+We then times that matrix by \( \frac{1}{{a \cdot d - b \cdot c}} \). If the detriment is non-zero then the 2x2 matrix \(\textit{does}\) have an inverse. Otherwise, this 2x2 matrix does have an inverse,
+and is therefore incalculable. Here is an example:
+\begin{center}
+    \(
+        \begin{pmatrix}
+            4 & 7\\
+            2 & 6
+        \end{pmatrix}
+        ^{-1} 
+        =
+        \frac{1}{4 \cdot 6 - 7 \cdot 2}
+        \cdot
+        \begin{pmatrix}
+            6 & -7\\
+            -2 & 4
+        \end{pmatrix}
+    \)
 
-
+    \(
+        =
+        \begin{pmatrix}
+            0.6 & -0.7\\
+            -0.2 & 0.4
+        \end{pmatrix}
+    \)
+\end{center}
+The best idea is to just enter \(\frac{1}{4 \cdot 6 - 7 \cdot 2}\) onto a scientific calculator directly. Do not work out
+\( 4 \cdot 6 - 7 \cdot 2 \) yourself as this can lead to an incorrect calculation, especially since there are so many decimal places involved. 
+\subsection{Multiplying the matrix}
+Once we have worked out the detriment, we then use it to multiply the matrix by its inverse. 
 \end{document}
