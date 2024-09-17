@@ -1,0 +1,74 @@
+\documentclass[options]{article}
+\title{Multiplication, addition and subtraction of matricies}
+\author{Nathan Blackburn {blacknand@github}}
+\date{September 2024}
+
+% Document config
+\usepackage{amsmath}                            % For matricies
+\usepackage{enumitem}                           % For lists
+\setlength{\parskip}{1em}  
+
+\begin{document}
+\maketitle
+Notes on basic arithmatical operations on matricies including addition, subtraction and multiplication of different sized matricies.
+\section{Multiplication}
+Two matricies can only be multiplied together if the number of the columns in the first is the same as the number of rows in the second. The
+result of two is a matrix that has the same number of rows as the first matrix, and same number of columns as the second.
+\subsection{Example 1}
+Find \(ab\) where \(a = \begin{pmatrix} 1 & 4\\6 & 3 \end{pmatrix}\) and \(b = \begin{pmatrix} 2 \\ 5 \end{pmatrix}\)
+\begin{center}
+    \( 
+        c =
+        \begin{pmatrix}
+            1 & 4 \\ 6 & 3
+        \end{pmatrix} 
+        \cdot
+        \begin{pmatrix}
+            2 \\ 5
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            1 * 2 + 4 * 5\\
+            6 * 2 + 3 * 5
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            22 \\ 27
+        \end{pmatrix}
+    \)
+\end{center}
+The first row of \(a\) multiplies the first column of \(b\) to give:
+\begin{center}
+    \(
+        (1 * 2) + (4 * 5) = 2 + 20 = 22
+    \)
+\end{center}
+The second row of \(a\) then multiples by the first column of \(b\) to give:
+\begin{center}
+    \(
+        (6 * 2) + (3 * 5) = 12 + 15 = 27
+    \)
+\end{center}
+\subsection{Example 2}
+Find, if possible: \( \begin{pmatrix} 1 & 4 & 9\\2 & 0 & 1 \end{pmatrix} \cdot \begin{pmatrix} 1 & 9\\8 & 7\\-7 & 3 \end{pmatrix} \)
+
+\begin{center}
+    \(
+        \begin{pmatrix}
+            1 \times 1 + 4 \times 8 + 9 \times -7 & 1 \times 9 + 4 \times 7 + 9 \times 3 \\
+            2 \times 1 + 0 \times 8 + 1 \times -7 & 2 \times 9 + 0 \times 7 + 1 \times 3
+        \end{pmatrix}
+    \)
+\end{center}
+The first row multiplies by both columns, and then the second row multiplies by both columns.
+\begin{center}
+    \(
+        =
+        \begin{pmatrix}
+            -30 & 64 \\
+            -5 & 21
+        \end{pmatrix}
+    \)
+\end{center}
+
+\end{document}
